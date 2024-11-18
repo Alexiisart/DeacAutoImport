@@ -1,0 +1,86 @@
+.container.fila {
+  display: flex;
+  height: calc(100vh - 160px);
+  margin-top: 80px;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.map-container {
+  width: 70%;
+  height: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.contact-info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.contact-info h2 {
+  font: 600 24px/1.2 Poppins;
+  color: #333;
+}
+
+.location-text {
+  font: normal 16px/1.6 Poppins;
+  color: #555;
+}
+
+.fun-text {
+  font: italic 16px/1.4 Poppins;
+  color: #666;
+  border-left: 3px solid #333;
+  padding-left: 1rem;
+}
+
+.horario {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.horario h3 {
+  font: 500 18px/1.2 Poppins;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.horario p {
+  font: normal 14px/1.4 Poppins;
+  color: #666;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+  .container.fila {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .map-container,
+  .contact-info {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .contact-info {
+    height: auto;
+    min-height: 300px;
+  }
+}

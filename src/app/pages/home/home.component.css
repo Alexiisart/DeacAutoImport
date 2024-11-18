@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-content h1 {
+  font: normal normal normal 40px/14px Poppins;
+  position: absolute;
+  line-height: 1.2;
+  text-align: center;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  z-index: 3;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: #0000007c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.hero-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow {
+  font-size: 3rem;
+  color: #ffffff;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: scrollDown 1s infinite;
+  z-index: 3;
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+i:hover {
+  opacity: 1;
+}
+
+.preferirnos {
+  width: 100%;
+}
+
+.info-1 {
+  padding: 4rem 15rem;
+}
+
+.info-1 h6 {
+  font: normal normal bold 14px/14px Poppins;
+  letter-spacing: 0px;
+  color: #dba525;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.info-1 h2 {
+  font: normal normal normal 40px/14px Poppins;
+  letter-spacing: 0px;
+  line-height: 1.2;
+  color: #131313;
+}
+
+.info-2 {
+  width: 100%;
+  height: 40vh;
+  background: #131313 0% 0% no-repeat padding-box;
+  display: flex;
+}
+
+.info-2-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  margin: 1rem auto;
+}
+
+.info-2-item h3 {
+  font: normal normal 600 18px/20px Poppins;
+  letter-spacing: 0px;
+  color: #dba525;
+  padding-bottom: 1rem;
+}
+
+.info-2-item p {
+  text-align: left;
+  font: normal normal normal 12px/20px Poppins;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-right: 6rem;
+}
+
+.fanaticos {
+  width: 100%;
+}
+
+.fanaticos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -200px;
+}
+
+.fanaticos p {
+  font: normal normal normal 14px/20px Poppins;
+  letter-spacing: 0px;
+  color: #131313;
+  padding: 2rem 15rem;
+  text-align: left;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    height: 80vh; /* Reduce la altura para evitar overflow */
+  }
+
+  .hero-content h1 {
+    font-size: 24px; /* Reduce el tamaño de la fuente */
+    bottom: 35%; /* Ajusta la posición */
+  }
+
+  .arrow {
+    left: 45%;
+    bottom: 25%; /* Ajusta la posición */
+  }
+
+  .info-1 {
+    padding: 2rem 1rem; /* Reduce el padding */
+  }
+
+  .info-1 h2 {
+    font-size: 28px;
+    line-height: 1.2; /* Reduce el tamaño de la fuente */
+  }
+
+  .hero-content-text {
+    top: 50%;
+  }
+
+  .info-2 {
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    flex-direction: column; /* Cambia la dirección del flex */
+  }
+
+  .info-2-item {
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 2rem 0; /* Ajusta el margen */
+  }
+
+  .info-2-item p {
+    margin: 0rem 3rem; /* Elimina el margen derecho */
+  }
+
+  .info-2-item h3 {
+    margin: 0rem 3rem;
+  }
+
+  .fanaticos img {
+    object-position: center; /* Centra la imagen */
+  }
+
+  .fanaticos p {
+    padding: 1rem; /* Reduce el padding */
+  }
+}

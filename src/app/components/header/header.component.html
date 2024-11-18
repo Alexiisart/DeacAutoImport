@@ -1,0 +1,19 @@
+<header>
+  <div class="logo col-50">
+    <a routerLink="/">
+      <img src="/assets/DEACAUTOIMPORT.png" alt="" />
+    </a>
+  </div>
+
+  <div class="hamburguesa" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav class="col-50" [class.active]="menuOpen">
+    <a routerLink="/contacto">Contacto</a>
+    <a routerLink="/catalogo">Catalogo</a>
+    <a routerLink="/nosotros">Nosotros</a>
+  </nav>
+</header>

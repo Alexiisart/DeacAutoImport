@@ -1,0 +1,88 @@
+<div class="modal-overlay" [class.active]="isOpen" (click)="closeModal($event)">
+  <div class="modal-content">
+    <!-- Botón cerrar -->
+    <svg
+      class="close-button"
+      (click)="closeModal($event)"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+        fill="currentColor"
+      />
+    </svg>
+
+    <div class="modal-grid">
+      <!-- Columna izquierda: Carrete de imágenes -->
+      <div class="image-carousel">
+        <img
+          [src]="vehiculo.imagen"
+          [alt]="vehiculo.modelo"
+          class="main-image"
+        />
+        <!-- Aquí puedes agregar miniaturas adicionales si tienes más imágenes -->
+        <div class="thumbnails">
+          <img src="/assets/images/{{ vehiculo.modelo }}-1.jpg" alt="Vista 1" />
+          <img src="/assets/images/{{ vehiculo.modelo }}-2.jpg" alt="Vista 2" />
+          <img src="/assets/images/{{ vehiculo.modelo }}-3.jpg" alt="Vista 3" />
+        </div>
+      </div>
+
+      <!-- Columna derecha: Información -->
+      <div class="vehicle-info">
+        <h2>{{ vehiculo.modelo }}</h2>
+        <p class="precio">{{ vehiculo.precio }}</p>
+
+        <div class="specs-section">
+          <h3>Especificaciones</h3>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="label">Motor:</span>
+              <span>{{ vehiculo.especificaciones.motor }}</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">Potencia:</span>
+              <span>{{ vehiculo.especificaciones.potencia }}</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">Transmisión:</span>
+              <span>{{ vehiculo.especificaciones.transmision }}</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">Consumo:</span>
+              <span>{{ vehiculo.especificaciones.consumoCombustible }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-section">
+          <div class="ventajas">
+            <h3>Ventajas</h3>
+            <ul>
+              @for (ventaja of vehiculo.caracteristicas.ventajas; track ventaja)
+              {
+              <li>{{ ventaja }}</li>
+              }
+            </ul>
+          </div>
+
+          <div class="tecnologia">
+            <h3>Tecnología</h3>
+            <ul>
+              @for (tech of vehiculo.caracteristicas.tecnologia; track tech) {
+              <li>{{ tech }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+
+        <a href="https://wa.link/gkc2fd">
+          <button class="comprar-button">Me interesa</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

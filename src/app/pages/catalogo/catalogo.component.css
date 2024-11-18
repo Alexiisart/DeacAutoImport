@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal que envuelve todo */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor del catálogo */
+.catalogo-container {
+  flex: 1;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-vehiculos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.vehiculo-image {
+  width: 100%;
+  height: 150px;
+}
+
+.vehiculo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.vehiculo-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.vehiculo-card p {
+  margin-top: 1rem;
+}
+
+.vehiculo-card .precio {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.color {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.precio {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.mensaje-catalogo {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.btn-catalogo {
+  display: inline-block;
+  padding: 12px;
+  background-color: #242424;
+  color: white;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.btn-catalogo:hover {
+  background-color: transparent;
+  color: #242424;
+}
+
+.btn-catalogo:active {
+  background-color: #242424;
+  color: white;
+}

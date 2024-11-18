@@ -1,0 +1,30 @@
+<app-header class="header"></app-header>
+
+<div class="catalogo-container">
+  <div class="grid-vehiculos">
+    @for (vehiculo of vehiculos; track vehiculo.id) {
+    <div class="vehiculo-card">
+      <div class="vehiculo-image">
+        <img [src]="vehiculo.imagen" [alt]="vehiculo.modelo" />
+      </div>
+      <p>{{ vehiculo.modelo }}</p>
+      <p class="precio">{{ vehiculo.precio }}</p>
+      <button class="btn-catalogo" (click)="openModal(vehiculo)">
+        Ver más
+      </button>
+    </div>
+    }
+  </div>
+
+  <p class="mensaje-catalogo">
+    Si quieres ver nuestro catálogo completo, escríbenos. ¡No mordemos!
+  </p>
+</div>
+
+<app-footer class="footer"></app-footer>
+
+<app-modal-vehiculo
+  [isOpen]="modalOpen"
+  [vehiculo]="selectedVehiculo"
+  (close)="closeModal()"
+></app-modal-vehiculo>
